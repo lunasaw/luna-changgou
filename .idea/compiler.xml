@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <option name="BUILD_PROCESS_HEAP_SIZE" value="1000" />
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -14,20 +13,26 @@
         <module name="changgou-service-goods-api" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
+    <bytecodeTargetLevel>
       <module name="changgou-common" target="1.8" />
       <module name="changgou-common-db" target="1.8" />
       <module name="changgou-eureka" target="1.8" />
       <module name="changgou-gateway" target="1.8" />
-      <module name="changgou-parent" target="1.8" />
       <module name="changgou-service" target="1.8" />
       <module name="changgou-service-api" target="1.8" />
       <module name="changgou-service-goods" target="1.8" />
       <module name="changgou-service-goods-api" target="1.8" />
       <module name="changgou-web" target="1.8" />
+      <module name="luna-changgou" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_STRING" value="-parameters" />
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="changgou-common" options="-parameters" />
+      <module name="changgou-common-db" options="-parameters" />
+      <module name="changgou-eureka" options="-parameters" />
+      <module name="changgou-service-goods" options="-parameters" />
+      <module name="changgou-service-goods-api" options="-parameters" />
+    </option>
   </component>
 </project>
