@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$/changgou-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/changgou-eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/changgou-service-api/changgou-service-goods-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/changgou-service/changgou-service-file/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/changgou-service/changgou-service-goods/src/main/java" charset="UTF-8" />
   </component>
 </project>
