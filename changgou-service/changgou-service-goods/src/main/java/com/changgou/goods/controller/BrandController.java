@@ -16,6 +16,7 @@ import java.util.List;
  ****/
 @RestController
 @RequestMapping(value = "/brand")
+@CrossOrigin
 public class BrandController {
 
     @Autowired
@@ -42,7 +43,6 @@ public class BrandController {
     @GetMapping(value = "/search/{pageNum}/{size}")
     public Result<PageInfo<Brand>> findPage(@PathVariable(value = "pageNum")Integer pageNum,
                                             @PathVariable(value = "size")Integer size){
-        int a=10/0;
         //调用Service实现分页查询
         PageInfo<Brand> pageInfo = brandService.findPage(pageNum, size);
         return new Result<PageInfo<Brand>>(true, StatusCode.OK,"条件查询品牌集合成功！",pageInfo);
