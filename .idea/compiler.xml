@@ -6,12 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="luna-template" />
         <module name="changgou-service-goods-api" />
         <module name="changgou-common-db" />
         <module name="changgou-common" />
         <module name="changgou-service-file" />
         <module name="changgou-service-goods" />
-        <module name="code-template" />
         <module name="changgou-eureka" />
       </profile>
     </annotationProcessing>
@@ -26,8 +26,8 @@
       <module name="changgou-service-goods" target="1.8" />
       <module name="changgou-service-goods-api" target="1.8" />
       <module name="changgou-web" target="1.8" />
-      <module name="code-template" target="1.5" />
       <module name="luna-changgou" target="1.8" />
+      <module name="luna-template" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
