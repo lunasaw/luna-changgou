@@ -22,7 +22,7 @@ import java.util.Map;
 /****
  * @Author:luna
  * @Description:Spu业务层接口实现类
- * @Date 2020/7/16 0:16
+ * @Date 2019/6/14 0:16
  *****/
 @Service
 public class SpuServiceImpl implements SpuService {

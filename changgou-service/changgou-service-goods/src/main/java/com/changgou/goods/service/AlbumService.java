@@ -1,17 +1,12 @@
 package com.changgou.goods.service;
-
 import com.changgou.goods.pojo.Album;
 import com.github.pagehelper.PageInfo;
-
 import java.util.List;
-
-/**
- * @Package: com.changgou.goods.service
- * @ClassName: AlbumService
- * @Author: luna
- * @CreateTime: 2020/7/6 15:40
- * @Description:
- */
+/****
+ * @Author:luna
+ * @Description:Album业务层接口
+ * @Date 2019/6/14 0:16
+ *****/
 public interface AlbumService {
 
     /***
@@ -70,4 +65,3 @@ public interface AlbumService {
      */
     List<Album> findAll();
 }
-

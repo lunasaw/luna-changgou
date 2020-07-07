@@ -1,11 +1,14 @@
 package com.changgou.goods.service;
+
 import com.changgou.goods.pojo.Spec;
 import com.github.pagehelper.PageInfo;
+
 import java.util.List;
+
 /****
  * @Author:luna
  * @Description:Spec业务层接口
- * @Date 2020/7/16 0:16
+ * @Date 2019/6/14 0:16
  *****/
 public interface SpecService {
 
@@ -53,10 +56,11 @@ public interface SpecService {
 
     /**
      * 根据ID查询Spec
+     *
      * @param id
      * @return
      */
-     Spec findById(Integer id);
+    Spec findById(Integer id);
 
     /***
      * 查询所有Spec
@@ -67,6 +71,7 @@ public interface SpecService {
 
     /**
      * 根据分类的ID 查询规格的列表数据
+     *
      * @param id 三级分类的ID
      * @return
      */

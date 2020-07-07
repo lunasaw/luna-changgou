@@ -13,7 +13,7 @@ import java.util.List;
 /****
  * @Author:luna
  * @Description:
- * @Date 2020/7/16 0:18
+ * @Date 2019/6/14 0:18
  *****/
 
 @RestController
@@ -129,18 +129,22 @@ public class SpuController {
      * Goods(SPU+SKU)增加方法详情
      */
     @PostMapping("/save")
-    public Result save(@RequestBody Goods goods){
+    public Result save(@RequestBody Goods goods) {
         spuService.save(goods);
-        return new Result(true,StatusCode.OK,"保存商品成功",null);
+        return new Result(true, StatusCode.OK, "保存商品成功", null);
     }
 
-    //根据点击到的商品(SPU)的ID 获取到GOODS数据返回给页面展示
+    /**
+     * 根据点击到的商品(SPU)的ID 获取到GOODS数据返回给页面展示
+     *
+     * @param id
+     * @return
+     */
     @GetMapping("/goods/{id}")
-    public Result<Goods> findGoodsById(@PathVariable(value="id") Long id){
+    public Result<Goods> findGoodsById(@PathVariable(value = "id") Long id) {
         Goods goods = spuService.findGoodsById(id);
-        return new Result<Goods>(true,StatusCode.OK,"查询goods数据成功",goods);
+        return new Result<Goods>(true, StatusCode.OK, "查询goods数据成功", goods);
     }
-
 
 
     /**

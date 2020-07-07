@@ -3,7 +3,7 @@ package entity;
 /***
  *
  * @Author:luna
- * @Description:itheima
+ * @Description:luna
  *
  ****/
 public class RandomValueUtil {
