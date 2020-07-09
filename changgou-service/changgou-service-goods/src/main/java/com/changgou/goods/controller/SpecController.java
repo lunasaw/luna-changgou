@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /****
- * @Author:luna
+ * @Author:admin
  * @Description:
  * @Date 2019/6/14 0:18
  *****/
@@ -128,9 +128,9 @@ public class SpecController {
     /**
      * 根据商品分类的ID 查询该分类对应的 规格的列表
      *
-     * @param id
-     * @return
      */
+
+
     @GetMapping("/category/{id}")
     public Result<List<Spec>> findByCategoryId(@PathVariable(name="id") Integer id){
         List<Spec> specList = specService.findByCategoryId(id);

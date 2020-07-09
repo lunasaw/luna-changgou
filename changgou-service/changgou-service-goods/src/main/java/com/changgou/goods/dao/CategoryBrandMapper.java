@@ -3,7 +3,7 @@ import com.changgou.goods.pojo.CategoryBrand;
 import tk.mybatis.mapper.common.Mapper;
 
 /****
- * @Author:luna
+ * @Author:admin
  * @Description:CategoryBrand的Dao
  * @Date 2019/6/14 0:12
  *****/

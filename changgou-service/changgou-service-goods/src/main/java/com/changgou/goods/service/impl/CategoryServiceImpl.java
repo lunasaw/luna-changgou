@@ -10,7 +10,7 @@ import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 import java.util.List;
 /****
- * @Author:luna
+ * @Author:admin
  * @Description:Category业务层接口实现类
  * @Date 2019/6/14 0:16
  *****/
@@ -150,7 +150,6 @@ public class CategoryServiceImpl implements CategoryService {
 
     /**
      * 查询Category全部数据
-     *
      * @return
      */
     @Override
@@ -158,12 +157,6 @@ public class CategoryServiceImpl implements CategoryService {
         return categoryMapper.selectAll();
     }
 
-    /**
-     * 根据父节点条件查询
-     *
-     * @param pid
-     * @return
-     */
     @Override
     public List<Category> findByParentId(Integer pid) {
         //SELECT * from tb_category where parent_id=0

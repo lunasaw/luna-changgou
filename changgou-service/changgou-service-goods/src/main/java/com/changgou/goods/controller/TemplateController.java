@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /****
- * @Author:luna
+ * @Author:admin
  * @Description:
  * @Date 2019/6/14 0:18
  *****/
@@ -34,7 +34,7 @@ public class TemplateController {
     public Result<PageInfo> findPage(@RequestBody(required = false)  Template template, @PathVariable  int page, @PathVariable  int size){
         //调用TemplateService实现分页条件查询Template
         PageInfo<Template> pageInfo = templateService.findPage(template, page, size);
-        return new Result(true, StatusCode.OK, "查询成功", pageInfo);
+        return new Result(true,StatusCode.OK,"查询成功",pageInfo);
     }
 
     /***
@@ -118,9 +118,9 @@ public class TemplateController {
      * @return
      */
     @GetMapping
-    public Result<List<Template>> findAll() {
+    public Result<List<Template>> findAll(){
         //调用TemplateService实现查询所有Template
         List<Template> list = templateService.findAll();
-        return new Result<List<Template>>(true, StatusCode.OK, "查询成功", list);
+        return new Result<List<Template>>(true, StatusCode.OK,"查询成功",list) ;
     }
 }

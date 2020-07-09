@@ -10,7 +10,7 @@ import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 import java.util.List;
 /****
- * @Author:luna
+ * @Author:admin
  * @Description:StockBack业务层接口实现类
  * @Date 2019/6/14 0:16
  *****/

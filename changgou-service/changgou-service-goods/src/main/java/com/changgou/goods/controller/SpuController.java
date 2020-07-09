@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /****
- * @Author:luna
+ * @Author:admin
  * @Description:
  * @Date 2019/6/14 0:18
  *****/
@@ -136,12 +136,7 @@ public class SpuController {
         return new Result(true, StatusCode.OK, "保存商品成功", null);
     }
 
-    /**
-     * 根据点击到的商品(SPU)的ID 获取到GOODS数据返回给页面展示
-     *
-     * @param id
-     * @return
-     */
+    //根据点击到的商品(SPU)的ID 获取到GOODS数据返回给页面展示
     @GetMapping("/goods/{id}")
     public Result<Goods> findGoodsById(@PathVariable(value = "id") Long id) {
         Goods goods = spuService.findGoodsById(id);

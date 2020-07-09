@@ -16,7 +16,7 @@ import tk.mybatis.mapper.entity.Example;
 import java.util.List;
 
 /****
- * @Author:luna
+ * @Author:admin
  * @Description:Spec业务层接口实现类
  * @Date 2019/6/14 0:16
  *****/
@@ -163,12 +163,6 @@ public class SpecServiceImpl implements SpecService {
         return specMapper.selectAll();
     }
 
-    /**
-     * 根据分类的ID 查询规格的列表数据
-     *
-     * @param id 三级分类的ID
-     * @return
-     */
     @Override
     public List<Spec> findByCategoryId(Integer id) {
         //1.先根据商品分类的ID 获取模板的ID

@@ -3,7 +3,7 @@ import com.changgou.goods.pojo.Brand;
 import com.github.pagehelper.PageInfo;
 import java.util.List;
 /****
- * @Author:luna
+ * @Author:admin
  * @Description:Brand业务层接口
  * @Date 2019/6/14 0:16
  *****/
@@ -53,11 +53,10 @@ public interface BrandService {
 
     /**
      * 根据ID查询Brand
-     *
      * @param id
      * @return
      */
-    Brand findById(Integer id);
+     Brand findById(Integer id);
 
     /***
      * 查询所有Brand

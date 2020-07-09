@@ -3,7 +3,7 @@ import com.changgou.goods.pojo.Template;
 import com.github.pagehelper.PageInfo;
 import java.util.List;
 /****
- * @Author:luna
+ * @Author:admin
  * @Description:Template业务层接口
  * @Date 2019/6/14 0:16
  *****/

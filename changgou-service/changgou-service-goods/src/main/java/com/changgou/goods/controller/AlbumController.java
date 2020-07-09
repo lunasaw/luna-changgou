@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /****
- * @Author:luna
+ * @Author:admin
  * @Description:
  * @Date 2019/6/14 0:18
  *****/
@@ -110,7 +110,7 @@ public class AlbumController {
     public Result<Album> findById(@PathVariable Long id){
         //调用AlbumService实现根据主键查询Album
         Album album = albumService.findById(id);
-        return new Result<Album>(true, StatusCode.OK, "查询成功", album);
+        return new Result<Album>(true,StatusCode.OK,"查询成功",album);
     }
 
     /***
@@ -118,9 +118,9 @@ public class AlbumController {
      * @return
      */
     @GetMapping
-    public Result<List<Album>> findAll() {
+    public Result<List<Album>> findAll(){
         //调用AlbumService实现查询所有Album
         List<Album> list = albumService.findAll();
-        return new Result<List<Album>>(true, StatusCode.OK, "查询成功", list);
+        return new Result<List<Album>>(true, StatusCode.OK,"查询成功",list) ;
     }
 }
