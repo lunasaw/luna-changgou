@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * 描述
  *
- * @author luna
+ * @author 三国的包子
  * @version 1.0
  * @package com.changgou.file *
  * @since 1.0

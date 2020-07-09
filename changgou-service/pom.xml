@@ -8,23 +8,29 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>changgou-service</artifactId>
+
     <packaging>pom</packaging>
+    <description>
+        微服务的父工程
+    </description>
     <modules>
         <module>changgou-service-goods</module>
         <module>changgou-service-file</module>
-        <module>changgou-service-canal</module>
+        <module>changgou-servcie-canal</module>
+        <module>changgou-service-content</module>
+        <module>changgou-service-search</module>
     </modules>
-    <artifactId>changgou-service</artifactId>
-    <description>
-        所有微服务对应的父工程
-    </description>
 
     <dependencies>
-        <!--db依赖-->
+        <!--依赖db 和 common-->
         <dependency>
             <groupId>com.changgou</groupId>
             <artifactId>changgou-common-db</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
+
+
 </project>

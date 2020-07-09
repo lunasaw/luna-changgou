@@ -8,6 +8,3 @@ eureka:
     fetch-registry: false         #是否从eureka中获取信息
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-spring:
-  application:
-    name: eureka

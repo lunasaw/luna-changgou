@@ -20,6 +20,7 @@ public class BaseExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
     public Result error(Exception  e){
+        e.printStackTrace();
         return new Result(false,StatusCode.REMOTEERROR,e.getMessage());
     }
 }

@@ -18,9 +18,12 @@
     <modules>
         <module>changgou-service-goods-api</module>
         <module>changgou-service-content-api</module>
+        <module>changgou-service-search-api</module>
     </modules>
 
     <dependencies>
+
+
 
         <!--通用的common  要有feign的依赖-->
         <dependency>

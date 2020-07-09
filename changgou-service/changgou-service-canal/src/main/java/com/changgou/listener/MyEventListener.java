@@ -23,43 +23,60 @@ import java.util.List;
 @CanalEventListener
 public class MyEventListener {
 
-    //当数据被添加的时候触发
-    // CanalEntry.EventType eventType  监听到的操作的类型  INSERT  UPDATE ,DELETE ,CREATE INDEX ,GRAND
-    // CanalEntry.RowData rowData 被修改的数据()
- /*   @InsertListenPoint
+    /**
+     * 当数据被添加的时候触发
+     *      CanalEntry.EventType eventType  监听到的操作的类型  INSERT  UPDATE ,DELETE ,CREATE INDEX ,GRAND
+     *      CanalEntry.RowData rowData 被修改的数据()
+     * @param eventType
+     * @param rowData
+     */
+    @InsertListenPoint
     public void onEvent(CanalEntry.EventType eventType, CanalEntry.RowData rowData) {
         //do something...
 
         List<CanalEntry.Column> afterColumnsList = rowData.getAfterColumnsList();
         for (CanalEntry.Column column : afterColumnsList) {
-            System.out.println(column.getName()+":"+column.getValue());
+            System.out.println(column.getName() + ":" + column.getValue());
         }
-    }*/
-    //当数据被更新的时候触发
-    /*@UpdateListenPoint
+    }
+
+    /**
+     * 当数据被更新的时候触发
+     * @param rowData
+     */
+    @UpdateListenPoint
     public void onEvent1(CanalEntry.RowData rowData) {
         //do something...
         List<CanalEntry.Column> afterColumnsList = rowData.getAfterColumnsList();
         for (CanalEntry.Column column : afterColumnsList) {
             System.out.println(column.getName()+":"+column.getValue());
         }
-    }*/
-    // 当数据被删除的时候触发
-   /* @DeleteListenPoint
+    }
+
+    /**
+     * 当数据被删除的时候触发
+     * @param eventType
+     * @param rowData
+     */
+    @DeleteListenPoint
     public void onEvent3(CanalEntry.EventType eventType, CanalEntry.RowData rowData) {
         //do something...
         List<CanalEntry.Column> afterColumnsList = rowData.getAfterColumnsList();
         for (CanalEntry.Column column : afterColumnsList) {
             System.out.println(column.getName()+":"+column.getValue());
         }
-    }*/
+    }
 
-    //自定义事件的触发
-    // destination = "example" 指定某一个目的地 一定要和配置文件中的目录保持一致
-    //schema = "canal-test" 要监听的数据库实例
-    //table = {"t_user", "test_table"},   要监听的表
-    // eventType = CanalEntry.EventType.UPDATE  要监听的类型
-    /*@ListenPoint(destination = "example", schema = "changgou_content", table = {"tb_content"}, eventType = {CanalEntry.EventType.UPDATE,CanalEntry.EventType.INSERT,CanalEntry.EventType.DELETE})
+    /**
+     *    自定义事件的触发
+     *      destination = "example" 指定某一个目的地 一定要和配置文件中的目录保持一致
+     *     schema = "canal-test" 要监听的数据库实例
+     *     table = {"t_user", "test_table"},   要监听的表
+     *      eventType = CanalEntry.EventType.UPDATE  要监听的类型
+     * @param eventType
+     * @param rowData
+     */
+    @ListenPoint(destination = "example", schema = "changgou_content", table = {"tb_content"}, eventType = {CanalEntry.EventType.UPDATE,CanalEntry.EventType.INSERT,CanalEntry.EventType.DELETE})
     public void onEvent4(CanalEntry.EventType eventType, CanalEntry.RowData rowData) {
         //do something...
 
@@ -67,7 +84,7 @@ public class MyEventListener {
         for (CanalEntry.Column column : afterColumnsList) {
             System.out.println(column.getName()+":"+column.getValue());
         }
-    }*/
+    }
 
 
 

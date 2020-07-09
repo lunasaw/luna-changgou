@@ -1,24 +1,19 @@
 package entity;
 
-import com.alibaba.fastjson.JSON;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import java.io.Serializable;
 
-/****
- * @Author:luna
- * @Description:返回实体Bean
- *****/
-@ApiModel(description = "Result", value = "Result")
-public class Result<T> {
-
-    @ApiModelProperty(value = "执行是否成功,true:成功,false:失败", required = true)
+/**
+ * 描述
+ *
+ * @author 三国的包子
+ * @version 1.0
+ * @package entity *
+ * @since 1.0
+ */
+public class Result<T> implements Serializable {
     private boolean flag;//是否成功
-    @ApiModelProperty(value = "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据", required = true)
     private Integer code;//返回码
-
-    @ApiModelProperty(value = "提示信息", required = true)
     private String message;//返回消息
-    @ApiModelProperty(value = "逻辑数据", required = true)
     private T data;//返回数据
 
     public Result(boolean flag, Integer code, String message, Object data) {

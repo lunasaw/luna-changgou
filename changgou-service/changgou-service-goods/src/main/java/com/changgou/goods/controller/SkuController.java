@@ -123,4 +123,11 @@ public class SkuController {
         List<Sku> list = skuService.findAll();
         return new Result<List<Sku>>(true, StatusCode.OK,"查询成功",list) ;
     }
+
+    //根据状态 查询状态为1 的所有的符合条件的sku的列表数据返回
+    @GetMapping("/status/{status}")
+    public Result<List<Sku>> findByStatus(@PathVariable(name="status") String status){
+        List<Sku> skusList = skuService.findByStatus(status);
+        return new Result<List<Sku>>(true,StatusCode.OK,"查询sku列表成功",skusList);
+    }
 }

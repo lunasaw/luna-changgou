@@ -9,6 +9,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/luna-template/pom.xml" />
         <option value="$PROJECT_DIR$/changgou-service-api/changgou-service-content-api/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou-service-api/changgou-service-search-api/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-canal/pom.xml" />
       </list>
     </option>
   </component>

@@ -16,10 +16,10 @@ import tk.mybatis.spring.annotation.MapperScan;
 @SpringBootApplication
 @EnableEurekaClient
 @MapperScan(basePackages = {"com.changgou.goods.dao"})  //Dao接口包扫描->@MapperScan:tk下的包
-public class GoodsApplicatin {
+public class GoodsApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(GoodsApplicatin.class, args);
+        SpringApplication.run(GoodsApplication.class, args);
     }
 
     @Bean
