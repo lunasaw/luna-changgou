@@ -19,6 +19,7 @@
       <module fileurl="file://$PROJECT_DIR$/changgou-web/changgou-web.iml" filepath="$PROJECT_DIR$/changgou-web/changgou-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/luna-changgou.iml" filepath="$PROJECT_DIR$/.idea/luna-changgou.iml" />
       <module fileurl="file://$PROJECT_DIR$/luna-template/luna-template.iml" filepath="$PROJECT_DIR$/luna-template/luna-template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/luna-template/luna-template.iml" filepath="$PROJECT_DIR$/luna-template/luna-template.iml" />
     </modules>
   </component>
 </project>

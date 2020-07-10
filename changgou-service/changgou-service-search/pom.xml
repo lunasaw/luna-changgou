@@ -12,17 +12,12 @@
     <artifactId>changgou-service-search</artifactId>
 
     <dependencies>
-
-
         <!-- 依赖search的API  依赖goods  依赖 springdataes -->
         <dependency>
             <groupId>com.changgou</groupId>
             <artifactId>changgou-service-search-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
-
     </dependencies>
-
 
 </project>

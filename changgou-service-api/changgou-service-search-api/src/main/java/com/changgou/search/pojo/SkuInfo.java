@@ -32,10 +32,12 @@ public class SkuInfo implements Serializable {
     @Id
     private Long id;
 
-    //SKU名称
-    // @Field 字段的映射
-    // analyzer 指定索引的是用的分词分词器   searchAnalyzer :搜索的时候使用的分词器
-    // type 指定数据类型
+    /**
+     * SKU名称
+     *      @Field 字段的映射
+     *      analyzer 指定索引的是用的分词分词器   searchAnalyzer :搜索的时候使用的分词器
+     *      type 指定数据类型
+     */
     @Field(type = FieldType.Text, analyzer = "ik_smart")
     private String name;
 

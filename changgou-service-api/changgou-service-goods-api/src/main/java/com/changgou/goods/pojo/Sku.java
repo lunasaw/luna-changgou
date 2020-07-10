@@ -246,5 +246,4 @@ public class Sku implements Serializable{
 		this.status = status;
 	}
 
-
 }

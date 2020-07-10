@@ -52,7 +52,7 @@ public class SkuServiceImpl implements SkuService {
     @Override
     public void importEs() {
         //1.调用 goods微服务的fegin 查询 符合条件的sku的数据
-        Result<List<Sku>> skuResult = skuFeign.findByStatus("1");
+        Result<List<Sku>> skuResult = skuFeign.findByStatus("3");
         List<Sku> data = skuResult.getData();//sku的列表
         //将sku的列表 转换成es中的skuinfo的列表
         List<SkuInfo> skuInfos = JSON.parseArray(JSON.toJSONString(data), SkuInfo.class);
@@ -90,12 +90,10 @@ public class SkuServiceImpl implements SkuService {
         nativeSearchQueryBuilder.addAggregation(AggregationBuilders.terms("skuCategorygroup").field("categoryName").size(50));
 
 
-
-
         //匹配查询  先分词 再查询  主条件查询
         //参数1 指定要搜索的字段
         //参数2 要搜索的值(先分词 再搜索)
-        nativeSearchQueryBuilder.withQuery(QueryBuilders.matchQuery("name",keywords));
+        nativeSearchQueryBuilder.withQuery(QueryBuilders.matchQuery("name", keywords));
 
         //5.构建查询对象(封装了查询的语法)
         NativeSearchQuery nativeSearchQuery = nativeSearchQueryBuilder.build();
@@ -121,11 +119,11 @@ public class SkuServiceImpl implements SkuService {
         int totalPages = skuInfos.getTotalPages();//总页数
         long totalElements = skuInfos.getTotalElements();//总记录数
 
-        Map<String,Object> resultMap =new HashMap<>();
-        resultMap.put("categoryList",categoryList);//商品分类的列表数据
-        resultMap.put("rows",content);
-        resultMap.put("total",totalElements);
-        resultMap.put("totalPages",totalPages);
+        Map<String, Object> resultMap = new HashMap<>();
+        resultMap.put("categoryList", categoryList);//商品分类的列表数据
+        resultMap.put("rows", content);
+        resultMap.put("total", totalElements);
+        resultMap.put("totalPages", totalPages);
         return resultMap;
     }
 }
