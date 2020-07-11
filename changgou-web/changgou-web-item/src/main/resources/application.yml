@@ -17,4 +17,4 @@ spring:
   main:
     allow-bean-definition-overriding: true
 # 生成静态页的位置
-pagepath: C:\Users\Administrator\IdeaProjects\changgou\changgou-parent\changgou-web\changgou-web-item\src\main\resources\static
+pagepath: D:\myproject\luna-changgou\changgou-web\changgou-web-item\src\main\resources\static
