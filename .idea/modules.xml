@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/changgou-common-db/changgou-common-db.iml" filepath="$PROJECT_DIR$/changgou-common-db/changgou-common-db.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-eureka/changgou-eureka.iml" filepath="$PROJECT_DIR$/changgou-eureka/changgou-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-gateway/changgou-gateway.iml" filepath="$PROJECT_DIR$/changgou-gateway/changgou-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-gateway/changgou-gateway-web/changgou-gateway-web.iml" filepath="$PROJECT_DIR$/changgou-gateway/changgou-gateway-web/changgou-gateway-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-service/changgou-service.iml" filepath="$PROJECT_DIR$/changgou-service/changgou-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-service-api/changgou-service-api.iml" filepath="$PROJECT_DIR$/changgou-service-api/changgou-service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-service/changgou-service-canal/changgou-service-canal.iml" filepath="$PROJECT_DIR$/changgou-service/changgou-service-canal/changgou-service-canal.iml" />
@@ -16,10 +17,14 @@
       <module fileurl="file://$PROJECT_DIR$/changgou-service-api/changgou-service-goods-api/changgou-service-goods-api.iml" filepath="$PROJECT_DIR$/changgou-service-api/changgou-service-goods-api/changgou-service-goods-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-service/changgou-service-search/changgou-service-search.iml" filepath="$PROJECT_DIR$/changgou-service/changgou-service-search/changgou-service-search.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-service-api/changgou-service-search-api/changgou-service-search-api.iml" filepath="$PROJECT_DIR$/changgou-service-api/changgou-service-search-api/changgou-service-search-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-service/changgou-service-user/changgou-service-user.iml" filepath="$PROJECT_DIR$/changgou-service/changgou-service-user/changgou-service-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-service-api/changgou-service-user-api/changgou-service-user-api.iml" filepath="$PROJECT_DIR$/changgou-service-api/changgou-service-user-api/changgou-service-user-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-web/changgou-web.iml" filepath="$PROJECT_DIR$/changgou-web/changgou-web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/luna-template/code-template.iml" filepath="$PROJECT_DIR$/luna-template/code-template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-web/changgou-web-item/changgou-web-item.iml" filepath="$PROJECT_DIR$/changgou-web/changgou-web-item/changgou-web-item.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-service-api/changgou-web-item-api/changgou-web-item-api.iml" filepath="$PROJECT_DIR$/changgou-service-api/changgou-web-item-api/changgou-web-item-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-web/changgou-web-search/changgou-web-search.iml" filepath="$PROJECT_DIR$/changgou-web/changgou-web-search/changgou-web-search.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/luna-changgou.iml" filepath="$PROJECT_DIR$/.idea/luna-changgou.iml" />
-      <module fileurl="file://$PROJECT_DIR$/luna-template/luna-template.iml" filepath="$PROJECT_DIR$/luna-template/luna-template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/luna-template/code-template.iml" filepath="$PROJECT_DIR$/luna-template/code-template.iml" />
     </modules>
   </component>
 </project>

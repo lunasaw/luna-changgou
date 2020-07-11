@@ -26,7 +26,6 @@ import java.util.Map;
  * @since 1.0
  */
 public class SearchResultMapperImpl implements SearchResultMapper {
-
     @Override
     public <T> AggregatedPage<T> mapResults(SearchResponse response, Class<T> clazz, Pageable pageable) {
 

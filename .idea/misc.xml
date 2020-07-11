@@ -11,6 +11,12 @@
         <option value="$PROJECT_DIR$/changgou-service-api/changgou-service-content-api/pom.xml" />
         <option value="$PROJECT_DIR$/changgou-service-api/changgou-service-search-api/pom.xml" />
         <option value="$PROJECT_DIR$/changgou-service/changgou-service-canal/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou-web/changgou-web-search/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou-web/changgou-web-item/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou-gateway/changgou-gateway-web/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou-service-api/changgou-web-item-api/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou-service-api/changgou-service-user-api/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-user/pom.xml" />
       </list>
     </option>
   </component>

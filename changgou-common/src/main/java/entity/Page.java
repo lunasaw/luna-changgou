@@ -16,22 +16,22 @@ public class Page <T> implements Serializable{
 
 	// 下页
 	private int next;
-	
+
 	private List<T> list;
 
 	// 最后一页
 	private int last;
-	
-	private int lpage;
-	
-	private int rpage;
-	
+
+	private int lpage;//左边的开始的页码
+
+	private int rpage;//右边额开始的页码
+
 	//从哪条开始查
 	private long start;
-	
+
 	//全局偏移量
 	public int offsize = 2;
-	
+
 	public Page() {
 		super();
 	}
