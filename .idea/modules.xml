@@ -17,8 +17,8 @@
       <module fileurl="file://$PROJECT_DIR$/changgou-service/changgou-service-search/changgou-service-search.iml" filepath="$PROJECT_DIR$/changgou-service/changgou-service-search/changgou-service-search.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-service-api/changgou-service-search-api/changgou-service-search-api.iml" filepath="$PROJECT_DIR$/changgou-service-api/changgou-service-search-api/changgou-service-search-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-web/changgou-web.iml" filepath="$PROJECT_DIR$/changgou-web/changgou-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/luna-template/code-template.iml" filepath="$PROJECT_DIR$/luna-template/code-template.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/luna-changgou.iml" filepath="$PROJECT_DIR$/.idea/luna-changgou.iml" />
-      <module fileurl="file://$PROJECT_DIR$/luna-template/luna-template.iml" filepath="$PROJECT_DIR$/luna-template/luna-template.iml" />
       <module fileurl="file://$PROJECT_DIR$/luna-template/luna-template.iml" filepath="$PROJECT_DIR$/luna-template/luna-template.iml" />
     </modules>
   </component>

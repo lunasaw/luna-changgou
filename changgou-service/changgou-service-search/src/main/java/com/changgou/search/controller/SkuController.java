@@ -34,12 +34,19 @@ public class SkuController {
     }
 
     /**
-     *
-     * @param searchMap  搜索的条件 map
-     * @return  resultMap  返回的结果 map
+     * @param searchMap 搜索的条件 map
+     * @return resultMap  返回的结果 map
      */
     @PostMapping
-    public Map search(@RequestBody(required = false) Map searchMap){
-       return  skuService.search(searchMap);
+    public Map search(@RequestBody(required = false) Map searchMap) {
+        Object pageNum = searchMap.get("pageNum");
+        if (pageNum == null) {
+            searchMap.put("pageNum", "1");
+        }
+        if (pageNum instanceof Integer) {
+            searchMap.put("pageNum", pageNum.toString());
+        }
+
+        return skuService.search(searchMap);
     }
 }
