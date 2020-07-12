@@ -8,7 +8,9 @@ import entity.BCrypt;
 import entity.JwtUtil;
 import entity.Result;
 import entity.StatusCode;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
@@ -133,6 +135,7 @@ public class UserController {
         List<User> list = userService.findAll();
         return new Result<List<User>>(true, StatusCode.OK, "查询成功", list);
     }
+
 
     @RequestMapping("/login")
     public Result<User> login(String username, String password, HttpServletResponse response, HttpServletRequest request) {

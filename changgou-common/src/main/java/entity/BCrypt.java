@@ -14,6 +14,8 @@
 
 package entity;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import java.io.UnsupportedEncodingException;
 import java.security.SecureRandom;
 
@@ -788,5 +790,21 @@ public class BCrypt {
 			ret |= hashed_bytes[i] ^ try_bytes[i];
 		}
 		return ret == 0;
+	}
+
+
+	public static void main(String[] args) {
+
+		//用户密码
+		String password = "changgou";
+		//密码加密
+		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+		String newPassword = passwordEncoder.encode(password);//加密
+		System.out.println("加密密码为：" + newPassword);
+		//对比这两个密码是否是同一个密码
+		// true 两个密码一致 false反之
+		boolean matches = passwordEncoder.matches(password, newPassword);
+		System.out.println(checkpw("changgou", newPassword));
+		System.out.println(matches);
 	}
 }
