@@ -47,7 +47,7 @@ public class AuthorizeFilter implements GlobalFilter, Ordered {
         if (StringUtils.isEmpty(token)) {
             //4.2 从cookie中中获取令牌数据
             HttpCookie first = request.getCookies().getFirst(AUTHORIZE_TOKEN);
-            if (first != null) {
+            if (!StringUtils.isEmpty(first)) {
                 token = first.getValue();//就是令牌的数据
             }
         }
@@ -68,7 +68,6 @@ public class AuthorizeFilter implements GlobalFilter, Ordered {
 
         try {
             Claims claims = JwtUtil.parseJWT(token);
-
         } catch (Exception e) {
             e.printStackTrace();
             //解析失败

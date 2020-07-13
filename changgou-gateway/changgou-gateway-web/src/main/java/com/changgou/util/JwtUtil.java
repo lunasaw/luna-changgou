@@ -1,9 +1,6 @@
 package com.changgou.util;
 
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.JwtBuilder;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.*;
 
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
@@ -23,7 +20,7 @@ public class JwtUtil {
     public static final Long JWT_TTL = 3600000L;// 60 * 60 *1000  一个小时
 
     //Jwt令牌信息
-    public static final String JWT_KEY = "itcast";
+    public static final String JWT_KEY = "luna";
 
     /**
      * 生成令牌
@@ -58,7 +55,7 @@ public class JwtUtil {
         JwtBuilder builder = Jwts.builder()
                 .setId(id)                    //唯一的ID
                 .setSubject(subject)          // 主题  可以是JSON数据
-                .setIssuer("admin")          // 签发者
+                .setIssuer("luna")          // 签发者
                 .setIssuedAt(now)             // 签发时间
                 .signWith(signatureAlgorithm, secretKey) // 签名算法以及密匙
                 .setExpiration(expDate);      // 设置过期时间

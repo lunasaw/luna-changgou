@@ -23,7 +23,7 @@ public class JwtUtil {
     public static final Long JWT_TTL = 3600000L;// 60 * 60 *1000  一个小时
 
     //Jwt令牌信息
-    public static final String JWT_KEY = "itcast";
+    public static final String JWT_KEY = "luna";
 
     /**
      * 生成令牌
