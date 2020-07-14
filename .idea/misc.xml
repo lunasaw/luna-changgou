@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/changgou-service-api/changgou-service-user-api/pom.xml" />
         <option value="$PROJECT_DIR$/changgou-service/changgou-service-user/pom.xml" />
         <option value="$PROJECT_DIR$/luna-template/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou-user-oauth/pom.xml" />
       </list>
     </option>
   </component>
