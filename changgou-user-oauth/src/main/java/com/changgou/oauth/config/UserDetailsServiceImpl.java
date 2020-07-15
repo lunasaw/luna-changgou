@@ -1,6 +1,6 @@
 package com.changgou.oauth.config;
-
 import com.changgou.oauth.util.UserJwt;
+import com.changgou.user.feign.UserFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -29,6 +29,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     ClientDetailsService clientDetailsService;
 
+    @Autowired
+    private UserFeign userFeign;
+
     /****
      * 自定义授权认证
      * @param username
@@ -46,9 +49,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                 //秘钥
                 String clientSecret = clientDetails.getClientSecret();
                 //静态方式
-                return new User(username, new BCryptPasswordEncoder().encode(clientSecret), AuthorityUtils.commaSeparatedStringToAuthorityList(""));
+                //return new User(username,new BCryptPasswordEncoder().encode(clientSecret), AuthorityUtils.commaSeparatedStringToAuthorityList(""));
                 //数据库查找方式
-                //return new User(username,clientSecret, AuthorityUtils.commaSeparatedStringToAuthorityList(""));
+                return new User(username, clientSecret, AuthorityUtils.commaSeparatedStringToAuthorityList(""));
             }
         }
 
@@ -57,8 +60,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         }
 
         //根据用户名查询用户信息
-        String pwd = new BCryptPasswordEncoder().encode("changgou");
-        //创建User对象
+        //String pwd = new BCryptPasswordEncoder().encode("szitheima");
+        String pwd = userFeign.findByUsername(username).getData().getPassword();
+        //创建User对象  授予权限.GOODS_LIST  SECKILL_LIST
         String permissions = "goods_list,seckill_list";
 
 
@@ -67,5 +71,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         //userDetails.setComy(songsi);
         return userDetails;
+    }
+
+    public static void main(String[] args) {
+        String zhangsan = new BCryptPasswordEncoder().encode("zhangsan");
+        System.out.println(zhangsan);
     }
 }

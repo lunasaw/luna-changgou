@@ -167,13 +167,12 @@ public class OauthClientDetailsServiceImpl implements OauthClientDetailsService 
      * @return
      */
     @Override
-    public OauthClientDetails findById(String id) {
-        return oauthClientDetailsMapper.selectByPrimaryKey(id);
+    public OauthClientDetails findById(String id){
+        return  oauthClientDetailsMapper.selectByPrimaryKey(id);
     }
 
     /**
      * 查询OauthClientDetails全部数据
-     *
      * @return
      */
     @Override

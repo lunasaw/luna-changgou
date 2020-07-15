@@ -136,12 +136,11 @@ public class AreasServiceImpl implements AreasService {
      */
     @Override
     public Areas findById(String id) {
-        return areasMapper.selectByPrimaryKey(id);
+        return  areasMapper.selectByPrimaryKey(id);
     }
 
     /**
      * 查询Areas全部数据
-     *
      * @return
      */
     @Override

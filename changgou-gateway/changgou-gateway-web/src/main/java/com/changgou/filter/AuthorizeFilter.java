@@ -25,7 +25,6 @@ import reactor.core.publisher.Mono;
 @Component
 public class AuthorizeFilter implements GlobalFilter, Ordered {
     private static final String AUTHORIZE_TOKEN = "Authorization";
-
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 
@@ -47,7 +46,7 @@ public class AuthorizeFilter implements GlobalFilter, Ordered {
         if (StringUtils.isEmpty(token)) {
             //4.2 从cookie中中获取令牌数据
             HttpCookie first = request.getCookies().getFirst(AUTHORIZE_TOKEN);
-            if (!StringUtils.isEmpty(first)) {
+            if (first != null) {
                 token = first.getValue();//就是令牌的数据
             }
         }
@@ -67,13 +66,19 @@ public class AuthorizeFilter implements GlobalFilter, Ordered {
         //5 解析令牌数据 ( 判断解析是否正确,正确 就放行 ,否则 结束)
 
         try {
-            Claims claims = JwtUtil.parseJWT(token);
+            //Claims claims = JwtUtil.parseJWT(token);
+
+
         } catch (Exception e) {
             e.printStackTrace();
             //解析失败
             response.setStatusCode(HttpStatus.UNAUTHORIZED);
             return response.setComplete();
         }
+
+        //添加头信息 传递给 各个微服务()
+        request.mutate().header(AUTHORIZE_TOKEN, "Bearer " + token);
+
 
         return chain.filter(exchange);
     }

@@ -156,12 +156,11 @@ public class UndoLogServiceImpl implements UndoLogService {
      */
     @Override
     public UndoLog findById(Long id) {
-        return undoLogMapper.selectByPrimaryKey(id);
+        return  undoLogMapper.selectByPrimaryKey(id);
     }
 
     /**
      * 查询UndoLog全部数据
-     *
      * @return
      */
     @Override

@@ -136,12 +136,11 @@ public class CitiesServiceImpl implements CitiesService {
      */
     @Override
     public Cities findById(String id) {
-        return citiesMapper.selectByPrimaryKey(id);
+        return  citiesMapper.selectByPrimaryKey(id);
     }
 
     /**
      * 查询Cities全部数据
-     *
      * @return
      */
     @Override

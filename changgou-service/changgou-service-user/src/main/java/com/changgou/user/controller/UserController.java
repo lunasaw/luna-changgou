@@ -8,9 +8,8 @@ import entity.BCrypt;
 import entity.JwtUtil;
 import entity.Result;
 import entity.StatusCode;
-import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
@@ -125,17 +124,37 @@ public class UserController {
         return new Result<User>(true, StatusCode.OK, "查询成功", user);
     }
 
+    /**
+     * 加载用户的数据
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping("/load/{id}")
+    public Result<User> findByUsername(@PathVariable(name = "id") String id) {
+        //调用UserService实现根据主键查询User
+        User user = userService.findById(id);
+        return new Result<User>(true, StatusCode.OK, "查询成功", user);
+    }
+
     /***
+     *
+     * 希望 拥有admin的角色人才能访问.
      * 查询User全部数据
      * @return
      */
+    @PreAuthorize(value = "hasAuthority('goods_list')")
+    // @PreAuthorize 表示 在执行方法之前 先进行权限校验,只有拥有 admin角色的用户可以执行该方法.
     @GetMapping
-    public Result<List<User>> findAll() {
+    public Result<List<User>> findAll(HttpServletRequest request) {
+
+        System.out.println("头信息为:" + request.getHeader("Authorization"));
+
+
         //调用UserService实现查询所有User
         List<User> list = userService.findAll();
         return new Result<List<User>>(true, StatusCode.OK, "查询成功", list);
     }
-
 
     @RequestMapping("/login")
     public Result<User> login(String username, String password, HttpServletResponse response, HttpServletRequest request) {

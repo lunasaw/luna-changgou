@@ -164,12 +164,11 @@ public class AddressServiceImpl implements AddressService {
      */
     @Override
     public Address findById(Integer id) {
-        return addressMapper.selectByPrimaryKey(id);
+        return  addressMapper.selectByPrimaryKey(id);
     }
 
     /**
      * 查询Address全部数据
-     *
      * @return
      */
     @Override

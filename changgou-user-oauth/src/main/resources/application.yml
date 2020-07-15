@@ -4,19 +4,19 @@ spring:
   application:
     name: user-auth
   redis:
-    host: 47.92.89.8
+    host: 192.168.211.132
     port: 6379
-    password: czy1024
+    password:
     jedis:
       pool:
         max-active: 8
         max-idle: 8
         min-idle: 0
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.92.89.8:3306/changgou_oauth?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.211.132:3306/changgou_oauth?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&serverTimezone=UTC
     username: root
-    password: czy1024
+    password: 123456
   main:
     allow-bean-definition-overriding: true
 eureka:

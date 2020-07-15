@@ -132,12 +132,11 @@ public class ProvincesServiceImpl implements ProvincesService {
      */
     @Override
     public Provinces findById(String id) {
-        return provincesMapper.selectByPrimaryKey(id);
+        return  provincesMapper.selectByPrimaryKey(id);
     }
 
     /**
      * 查询Provinces全部数据
-     *
      * @return
      */
     @Override
