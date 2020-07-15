@@ -30,13 +30,19 @@ spring:
           filters:
             - StripPrefix=1
 
+        - id: changgou_order_route
+          uri: lb://order
+          predicates:
+            - Path=/api/cart/**,/api/categoryReport/**,/api/orderConfig/**,/api/order/**,/api/orderItem/**,/api/orderLog/**,/api/preferential/**,/api/returnCause/**,/api/returnOrder/**,/api/returnOrderItem/**
+          filters:
+            - StripPrefix=1
+
   application:
     name: gateway-web
   #Redis配置
   redis:
-    host: 47.92.89.8
+    host: 192.168.211.132
     port: 6379
-    password: czy1024
 
 server:
   port: 8001
