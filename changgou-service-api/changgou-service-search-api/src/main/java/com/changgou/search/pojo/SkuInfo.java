@@ -15,7 +15,7 @@ import java.util.Map;
  * 3.创建文档 ()
  * 4.字段的映射(是否分词 是否索引 是否存储  数据类型是什么 分词器是什么)
  *
- * @author www.itheima.com
+ * @author luna
  * @version 1.0
  * @Document(indexName = "skuinfo",type = "docs")
  * indexName 指定创建的索引的名称

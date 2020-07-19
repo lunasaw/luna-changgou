@@ -8,7 +8,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 /**
  * 描述
  *
- * @author www.itheima.com
+ * @author luna
  * @version 1.0
  * @package com.changgou *
  * @since 1.0

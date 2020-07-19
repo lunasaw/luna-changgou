@@ -19,7 +19,7 @@ import java.util.Map;
 /**
  * 描述
  *
- * @author www.itheima.com
+ * @author luna
  * @version 1.0
  * @package com.changgou.oauth.service.impl *
  * @since 1.0

@@ -3,7 +3,7 @@ package com.changgou.item.service;
 /**
  * 描述
  *
- * @author www.itheima.com
+ * @author luna
  * @version 1.0
  * @package com.changgou.item.service *
  * @since 1.0

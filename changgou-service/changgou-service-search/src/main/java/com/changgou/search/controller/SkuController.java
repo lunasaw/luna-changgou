@@ -13,7 +13,7 @@ import java.util.Map;
  * 用于接收页面传递的请求 来测试 导入数据
  * 实现搜索的功能
  *
- * @author www.itheima.com
+ * @author luna
  * @version 1.0
  * @package com.changgou.search.controller *
  * @since 1.0

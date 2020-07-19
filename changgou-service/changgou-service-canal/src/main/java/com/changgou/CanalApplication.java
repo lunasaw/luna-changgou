@@ -10,7 +10,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 /**
  * canal的客户端 目的:监听服务端的数据的变化
  *
- * @author www.itheima.com
+ * @author luna
  * @version 1.0
  * @package com.changgou *
  * @since 1.0

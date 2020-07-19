@@ -18,9 +18,9 @@ import java.util.Map;
 
 /**
  * 自定义结果集映射 ()
- *  目的: 获取高亮的数据
+ * 目的: 获取高亮的数据
  *
- * @author www.itheima.com
+ * @author luna
  * @version 1.0
  * @package com.changgou.search.service *
  * @since 1.0

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * 描述
  *
- * @author www.itheima.com
+ * @author luna
  * @version 1.0
  * @package com.changgou.item.feign *
  * @since 1.0

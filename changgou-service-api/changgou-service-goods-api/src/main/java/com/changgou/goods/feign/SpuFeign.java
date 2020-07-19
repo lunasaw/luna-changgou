@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * 描述
  *
- * @author www.itheima.com
+ * @author luna
  * @version 1.0
  * @package com.changgou.goods.feign *
  * @since 1.0
@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @FeignClient(value = "goods")
 @RequestMapping("/spu")
 public interface SpuFeign {
+
     @GetMapping("/{id}")
     public Result<Spu> findById(@PathVariable(name = "id") Long id);
 }

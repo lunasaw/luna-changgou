@@ -13,7 +13,7 @@ import java.util.Date;
 /**
  * 描述
  *
- * @author www.itheima.com
+ * @author luna
  * @version 1.0
  * @package entity *
  * @since 1.0
@@ -101,7 +101,5 @@ public class JwtUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 }

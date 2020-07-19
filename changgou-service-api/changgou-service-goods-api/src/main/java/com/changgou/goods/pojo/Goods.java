@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 描述
  *
- * @author www.itheima.com
+ * @author luna
  * @version 1.0
  * @package com.changgou.goods.pojo *
  * @since 1.0

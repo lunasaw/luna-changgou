@@ -2,7 +2,7 @@ package entity;
 
 /***
  *
- * @Author:www.itheima.com
+ * @Author:luna
  * @Description:itheima
  *
  ****/
@@ -123,5 +123,9 @@ public class RandomValueUtil {
             third = str.substring(index, index + 1);
         }
         return first + second + third;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getChineseName());
     }
 }

@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 描述
  *
- * @author www.itheima.com
+ * @author luna
  * @version 1.0
  * @package com.changgou.goods.feign *
  * @since 1.0
@@ -37,4 +37,10 @@ public interface SkuFeign {
      */
     @PostMapping(value = "/search")
     public Result<List<Sku>> findList(@RequestBody(required = false) Sku sku);
+
+
+    @GetMapping("/{id}")
+    public Result<Sku> findById(@PathVariable(name = "id") Long id);
+
+
 }
