@@ -1,5 +1,6 @@
 package com.changgou.goods.service;
 import com.changgou.goods.pojo.Sku;
+import com.changgou.order.pojo.OrderItem;
 import com.github.pagehelper.PageInfo;
 import java.util.List;
 /****
@@ -66,8 +67,17 @@ public interface SkuService {
 
     /**
      * 查询符合条件的eSKU的列表数据
+     *
      * @param status
      * @return
      */
     List<Sku> findByStatus(String status);
+
+    /**
+     * 减少库存
+     *
+     * @param orderItem 要减少库的订单选项( 有要买的商品的ID 和要买的商品的数量)
+     * @return
+     */
+    int derCount(OrderItem orderItem);
 }

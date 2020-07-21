@@ -2,6 +2,7 @@ package com.changgou.goods.service.impl;
 import com.changgou.goods.dao.SkuMapper;
 import com.changgou.goods.pojo.Sku;
 import com.changgou.goods.service.SkuService;
+import com.changgou.order.pojo.OrderItem;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -207,5 +208,16 @@ public class SkuServiceImpl implements SkuService {
         Sku condition = new Sku();
         condition.setStatus(status);
         return skuMapper.select(condition);
+    }
+
+    @Override
+    public int derCount(OrderItem orderItem) {
+
+
+        int i = skuMapper.decrCount(orderItem);
+        if (i <= 0) {
+            throw new RuntimeException("减少库存失败");
+        }
+        return i;
     }
 }

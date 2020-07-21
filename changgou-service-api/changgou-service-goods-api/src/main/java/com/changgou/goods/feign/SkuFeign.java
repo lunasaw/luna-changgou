@@ -1,6 +1,7 @@
 package com.changgou.goods.feign;
 
 import com.changgou.goods.pojo.Sku;
+import com.changgou.order.pojo.OrderItem;
 import entity.Result;
 import entity.StatusCode;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -11,7 +12,7 @@ import java.util.List;
 /**
  * 描述
  *
- * @author luna
+ * @author www.itheima.com
  * @version 1.0
  * @package com.changgou.goods.feign *
  * @since 1.0
@@ -31,7 +32,6 @@ public interface SkuFeign {
 
     /**
      * 根据条件搜索的SKU的列表
-     *
      * @param sku
      * @return
      */
@@ -41,6 +41,11 @@ public interface SkuFeign {
 
     @GetMapping("/{id}")
     public Result<Sku> findById(@PathVariable(name = "id") Long id);
+
+
+    @PostMapping(value = "/decr/count")
+    public Result decrCount(@RequestBody OrderItem orderItem);
+
 
 
 }

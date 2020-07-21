@@ -1,6 +1,8 @@
 package com.changgou.user.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.changgou.user.config.TokenDecode;
+import com.changgou.user.pojo.Address;
 import com.changgou.user.pojo.User;
 import com.changgou.user.service.UserService;
 import com.github.pagehelper.PageInfo;
@@ -105,12 +107,13 @@ public class UserController {
      * @param user
      * @return
      */
-    @PostMapping
+    @PostMapping("/add")
     public Result add(@RequestBody User user) {
         //调用UserService实现添加User
         userService.add(user);
         return new Result(true, StatusCode.OK, "添加成功");
     }
+
 
     /***
      * 根据ID查询User数据
@@ -190,4 +193,15 @@ public class UserController {
 
 
     }
+
+
+    @GetMapping(value = "/points/add")
+    public Result addPoints(@RequestParam(value = "points") Integer points
+            , @RequestParam(value = "username") String username) {
+
+        userService.addPoints(points, username);
+        return new Result(true, StatusCode.OK, "添加积分成功");
+    }
+
+
 }

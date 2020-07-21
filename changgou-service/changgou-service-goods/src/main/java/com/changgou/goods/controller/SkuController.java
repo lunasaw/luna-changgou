@@ -1,6 +1,7 @@
 package com.changgou.goods.controller;
 import com.changgou.goods.pojo.Sku;
 import com.changgou.goods.service.SkuService;
+import com.changgou.order.pojo.OrderItem;
 import com.github.pagehelper.PageInfo;
 import entity.Result;
 import entity.StatusCode;
@@ -121,13 +122,22 @@ public class SkuController {
     public Result<List<Sku>> findAll(){
         //调用SkuService实现查询所有Sku
         List<Sku> list = skuService.findAll();
-        return new Result<List<Sku>>(true, StatusCode.OK,"查询成功",list) ;
+        return new Result<List<Sku>>(true, StatusCode.OK, "查询成功", list);
     }
 
     //根据状态 查询状态为1 的所有的符合条件的sku的列表数据返回
     @GetMapping("/status/{status}")
-    public Result<List<Sku>> findByStatus(@PathVariable(name="status") String status){
+    public Result<List<Sku>> findByStatus(@PathVariable(name = "status") String status) {
         List<Sku> skusList = skuService.findByStatus(status);
-        return new Result<List<Sku>>(true,StatusCode.OK,"查询sku列表成功",skusList);
+        return new Result<List<Sku>>(true, StatusCode.OK, "查询sku列表成功", skusList);
     }
+
+
+    @PostMapping(value = "/decr/count")
+    public Result decrCount(@RequestBody OrderItem orderItem) {
+        skuService.derCount(orderItem);
+        return new Result(true, StatusCode.OK, "减少库存成功");
+    }
+
+
 }

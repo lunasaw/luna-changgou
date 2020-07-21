@@ -164,15 +164,24 @@ public class AddressServiceImpl implements AddressService {
      */
     @Override
     public Address findById(Integer id) {
-        return  addressMapper.selectByPrimaryKey(id);
+        return addressMapper.selectByPrimaryKey(id);
     }
 
     /**
      * 查询Address全部数据
+     *
      * @return
      */
     @Override
     public List<Address> findAll() {
         return addressMapper.selectAll();
+    }
+
+    @Override
+    public List<Address> list(String username) {
+        //select * from tb_address where usenrame =?
+        Address address = new Address();
+        address.setUsername(username);
+        return addressMapper.select(address);
     }
 }

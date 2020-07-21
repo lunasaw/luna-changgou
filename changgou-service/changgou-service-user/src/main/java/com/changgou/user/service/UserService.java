@@ -1,5 +1,6 @@
 package com.changgou.user.service;
 
+import com.changgou.user.pojo.Address;
 import com.changgou.user.pojo.User;
 import com.github.pagehelper.PageInfo;
 
@@ -67,4 +68,16 @@ public interface UserService {
      * @return
      */
     List<User> findAll();
+
+
+    /**
+     * 增加积分
+     *
+     * @param points
+     * @param username
+     * @return
+     */
+    public int addPoints(Integer points, String username);
+
+
 }
