@@ -34,5 +34,4 @@ public interface UserFeign {
     public Result addPoints(@RequestParam(value = "points") Integer points
             , @RequestParam(value = "username") String username);
 
-
 }

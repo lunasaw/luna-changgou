@@ -222,6 +222,4 @@ public class UserServiceImpl implements UserService {
     public int addPoints(Integer points, String username) {
         return userMapper.addPoints(points, username);
     }
-
-
 }

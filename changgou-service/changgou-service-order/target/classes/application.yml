@@ -4,13 +4,14 @@ spring:
   application:
     name: order
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.211.132:3306/changgou_order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.92.89.8:3306/changgou_order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
-    password: 123456
+    password: czy1024
   redis:
-    host: 192.168.211.132
+    host: 47.92.89.8
     port: 6379
+    password: czy1024
   main:
     allow-bean-definition-overriding: true
 

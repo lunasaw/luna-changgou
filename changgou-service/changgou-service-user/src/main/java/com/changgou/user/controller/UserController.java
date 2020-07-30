@@ -203,5 +203,4 @@ public class UserController {
         return new Result(true, StatusCode.OK, "添加积分成功");
     }
 
-
 }

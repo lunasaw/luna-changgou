@@ -26,4 +26,5 @@ public class GoodsApplication {
     public IdWorker idWorker() {
         return new IdWorker(0, 1);
     }
+
 }

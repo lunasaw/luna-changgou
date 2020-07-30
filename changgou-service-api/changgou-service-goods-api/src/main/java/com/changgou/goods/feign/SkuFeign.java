@@ -46,6 +46,4 @@ public interface SkuFeign {
     @PostMapping(value = "/decr/count")
     public Result decrCount(@RequestBody OrderItem orderItem);
 
-
-
 }
