@@ -20,6 +20,7 @@
         <option value="$PROJECT_DIR$/changgou-user-oauth/pom.xml" />
         <option value="$PROJECT_DIR$/changgou-service/changgou-service-order/pom.xml" />
         <option value="$PROJECT_DIR$/changgou-service-api/changgou-service-order-api/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-pay/pom.xml" />
       </list>
     </option>
   </component>

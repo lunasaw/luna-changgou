@@ -26,6 +26,7 @@ public class OrderApplication {
         SpringApplication.run(OrderApplication.class, args);
     }
 
+
     @Bean
     public IdWorker idWorker() {
         return new IdWorker(0, 1);
