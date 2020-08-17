@@ -52,7 +52,7 @@ public interface OrderService {
      * 新增Order
      * @param order
      */
-    void add(Order order);
+    Order add(Order order);
 
     /**
      * 根据ID查询Order
@@ -67,4 +67,12 @@ public interface OrderService {
      * @return
      */
     List<Order> findAll();
+
+    /**
+     * 更新对应的订单的状态
+     *
+     * @param out_trade_no
+     * @param transaction_id
+     */
+    public void updateStatus(String out_trade_no, String transaction_id);
 }

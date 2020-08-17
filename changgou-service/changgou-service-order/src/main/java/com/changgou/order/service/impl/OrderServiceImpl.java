@@ -244,7 +244,7 @@ public class OrderServiceImpl implements OrderService {
      * @param order
      */
     @Override
-    public void add(Order order) {
+    public Order add(Order order) {
         //1.添加订单表的数据
         order.setId(idWorker.nextId() + "");
 
@@ -289,6 +289,9 @@ public class OrderServiceImpl implements OrderService {
         redisTemplate.delete("Cart_" + order.getUsername());
 
 
+        //调用定时任务
+
+        return order;
     }
 
     /**
@@ -310,5 +313,21 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public List<Order> findAll() {
         return orderMapper.selectAll();
+    }
+
+    @Override
+    public void updateStatus(String out_trade_no, String transaction_id) {
+        //1.根据id 获取订单的数据
+        Order order = orderMapper.selectByPrimaryKey(out_trade_no);
+        //2.更新
+        order.setUpdateTime(new Date());
+
+        //  支付的时间  从微信的参数中获取
+        order.setPayTime(new Date());
+        order.setOrderStatus("1");
+        order.setPayStatus("1");
+        order.setTransactionId(transaction_id);
+        //3.更新到数据库
+        orderMapper.updateByPrimaryKeySelective(order);
     }
 }
