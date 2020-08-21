@@ -3,10 +3,10 @@
   "info": {
     "description": "微服务工程代码生成器,生成Dao、Service、Controller、Pojo、Feign、Swagger的JSON脚本",
     "version": "1.0.0",
-    "title": "深圳黑马训练营代码生成器",
+    "title": "代码生成器",
     "termsOfService": "https://github.com/shenkunlin/code-template.git",
     "contact": {
-      "email": "shenkunlin@itcast.cn"
+      "email": "hexo.iszychen.club"
     },
     "license": {
       "name": "Apache 2.0",

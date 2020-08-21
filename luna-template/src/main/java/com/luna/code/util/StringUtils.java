@@ -13,6 +13,7 @@ public class StringUtils {
      * @return
      */
     public static String firstUpper(String str){
+        System.out.println(str);
         return str.substring(0,1).toUpperCase()+str.substring(1);
     }
 

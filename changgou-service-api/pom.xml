@@ -21,6 +21,7 @@
         <module>changgou-service-search-api</module>
         <module>changgou-web-item-api</module>
         <module>changgou-service-user-api</module>
+        <module>changgou-service-seckill-api</module>
     </modules>
 
     <dependencies>
